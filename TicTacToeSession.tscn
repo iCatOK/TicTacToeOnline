@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cit202a4x64ae"]
 
-[ext_resource type="PackedScene" uid="uid://dcy4xl1r3ijt0" path="res://Cell.tscn" id="1_1mkfg"]
+[ext_resource type="PackedScene" uid="uid://bbjci7hhph6cn" path="res://Cell.tscn" id="1_1mkfg"]
 [ext_resource type="Script" path="res://TicTacToeSession.gd" id="1_bqtxw"]
 
 [node name="Control" type="Control"]
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bqtxw")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

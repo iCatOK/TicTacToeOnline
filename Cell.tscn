@@ -1,13 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcy4xl1r3ijt0"]
+[gd_scene load_steps=6 format=3 uid="uid://bbjci7hhph6cn"]
 
 [ext_resource type="Script" path="res://Cell.gd" id="1_pmxti"]
+[ext_resource type="PackedScene" uid="uid://emlyughywyod" path="res://TextureMarker.tscn" id="2_3xhvs"]
+[ext_resource type="Texture2D" uid="uid://cfldidmssd48l" path="res://res/circle.png" id="2_cj5nl"]
+[ext_resource type="Texture2D" uid="uid://bqkbjbvu500os" path="res://res/cross.png" id="4_f86p2"]
+[ext_resource type="Texture2D" uid="uid://dlmaf3jhm1dxm" path="res://res/free.png" id="5_71b8g"]
 
-[node name="Cell" type="ColorRect"]
+[node name="Cell" type="Control"]
 custom_minimum_size = Vector2(80, 80)
-color = Color(0.545098, 0.560784, 0.615686, 1)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_pmxti")
-ocuppied_cell_color_first = Color(0.392157, 0.533333, 0.772549, 1)
-ocuppied_cell_color_second = Color(0.8, 0.458824, 0.721569, 1)
-free_cell_color = Color(0.541176, 0.556863, 0.611765, 1)
+
+[node name="TextureMarker" parent="." instance=ExtResource("2_3xhvs")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+ocuppied_cell_texture_first = ExtResource("2_cj5nl")
+ocuppied_cell_texture_second = ExtResource("4_f86p2")
+free_cell_texture = ExtResource("5_71b8g")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
