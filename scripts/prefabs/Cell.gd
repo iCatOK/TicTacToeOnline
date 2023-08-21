@@ -14,6 +14,11 @@ signal cell_ocuppied(cell: Cell)
 func change_cell_state(player_identifier: String):
 	is_occupied = true
 	marker.change_cell_state(player_identifier)
+	
+
+func reset_cell():
+	is_occupied = false
+	marker.set_free_cell()
 
 
 # Emmit signal and set itself if pressed

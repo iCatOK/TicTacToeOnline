@@ -16,6 +16,11 @@ func change_cell_state(player_identifier: String):
 		push_error("Unexpected player id occured: %s" % player_identifier)
 	self.texture = new_state
 
+
+func set_free_cell():
+	self.texture = free_cell_texture
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.texture = free_cell_texture

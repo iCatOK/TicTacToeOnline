@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://emlyughywyod"]
 
 [ext_resource type="Texture2D" uid="uid://cfldidmssd48l" path="res://res/circle.png" id="1_x5s2t"]
-[ext_resource type="Script" path="res://TextureMarker.gd" id="2_dyhrr"]
+[ext_resource type="Script" path="res://scripts/markers/TextureMarker.gd" id="2_wu3d3"]
 
 [node name="TextureRect" type="TextureRect"]
 anchors_preset = 15
@@ -10,4 +10,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_x5s2t")
-script = ExtResource("2_dyhrr")
+script = ExtResource("2_wu3d3")

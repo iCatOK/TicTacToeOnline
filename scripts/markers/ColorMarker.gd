@@ -17,6 +17,10 @@ func change_cell_state(player_identifier: String):
 	self.color = new_state
 
 
+func set_free_cell():
+	self.color = free_cell_color
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.color = free_cell_color
