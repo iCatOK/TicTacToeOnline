@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://cit202a4x64ae"]
+
+[ext_resource type="PackedScene" uid="uid://dcy4xl1r3ijt0" path="res://Cell.tscn" id="1_1mkfg"]
+[ext_resource type="Script" path="res://TicTacToeSession.gd" id="1_bqtxw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqtxw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.197914, 0.222775, 0.323495, 1)
+
+[node name="Map" type="HFlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -140.0
+offset_right = 140.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+
+[node name="Cell" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+
+[node name="Cell2" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+col = 1
+
+[node name="Cell3" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+col = 2
+
+[node name="Cell4" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+row = 1
+
+[node name="Cell5" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+row = 1
+col = 1
+
+[node name="Cell6" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+row = 1
+col = 2
+
+[node name="Cell7" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+row = 2
+
+[node name="Cell8" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+row = 2
+col = 1
+
+[node name="Cell9" parent="Map" instance=ExtResource("1_1mkfg")]
+layout_mode = 2
+row = 2
+col = 2
