@@ -1,6 +1,9 @@
 extends Control
 class_name Cell
 
+const CROSS_IDENTIFIER = "cross"
+const CIRCLE_IDENTIFIER = "circle"
+
 @export var row: int = 0
 @export var col: int = 0
 
@@ -11,9 +14,9 @@ var is_occupied: bool = false
 signal cell_ocuppied(cell: Cell)
 
 
-func change_cell_state(player_identifier: String):
+func change_cell_state(turn_identifier: String):
 	is_occupied = true
-	marker.change_cell_state(player_identifier)
+	marker.change_cell_state(turn_identifier)
 	
 
 func reset_cell():

@@ -3,8 +3,9 @@
 extends Node
 class_name Utils
 
-const FIRST_PLAYER_ID = "P1"
-const SECOND_PLAYER_ID = "P2"
+static var FIRST_PLAYER_ID: String = "P1" # cross
+static var SECOND_PLAYER_ID: String = "P2" # circle
+var a: String
 
 
 static func generate_2d_array(row_count: int, col_count: int) -> Array:

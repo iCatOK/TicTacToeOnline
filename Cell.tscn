@@ -22,8 +22,8 @@ script = ExtResource("1_51ve6")
 
 [node name="TextureMarker" parent="." instance=ExtResource("2_3xhvs")]
 layout_mode = 1
-ocuppied_cell_texture_first = ExtResource("2_cj5nl")
-ocuppied_cell_texture_second = ExtResource("4_f86p2")
+circle_texture = ExtResource("2_cj5nl")
+cross_texture = ExtResource("4_f86p2")
 free_cell_texture = ExtResource("5_71b8g")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
