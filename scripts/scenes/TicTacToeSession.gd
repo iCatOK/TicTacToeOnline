@@ -78,13 +78,13 @@ func _on_cell_ocuppied(cell: Cell):
 
 # Changes current player id and index according to player list.
 func change_player_after_turn():
-	# Clear label highlighting
+	# Clear previous player label highlighting
 	_current_player.label.add_theme_color_override("font_color", label_default_color)
 	
+	# Set next player
 	_current_player_index += 1
 	if _current_player_index > _players.size() - 1:
 		_current_player_index = 0
-	
 	_current_player = _players[_current_player_index]
 	
 	# Highlight next player label
@@ -93,6 +93,7 @@ func change_player_after_turn():
 	print("%s turn!" % _current_player.player_name)
 	
 
+# Initializes new game
 func initialize_new_game():
 	# Create map
 	_map = Utils.generate_2d_array(rows_count, cols_count)
